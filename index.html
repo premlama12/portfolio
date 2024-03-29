@@ -7,22 +7,98 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <nav class="navbar">
-        <img src="image/logo.png" alt="Prem" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-    </nav>
+    <div id="header">
+        <div class="container">
+        <nav class="navbar">
+            <img src="image/logo.png" alt="Prem" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </nav>
+    </div>
+
+    <!------Header -->
+        <div class="header-text">
+            <p>Full Stack web Developer</p>
+            <h1>Hi, I'm <span>Prem Kumar</span><br> Ghising from Nepal</h1>
+        </div>
+
+    </div>
+
+    <!----About section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/22.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I'm inspiring fullstack waeb developer who has been training in pro stack acadamy
+                        I'm MERN Stack developper who is proficient with JavaScript,NodeJS,react and MongoDB etc.
+                        I also have a knowledge about both the front end and back end web developer.
+                        I'm also proficient with UI/UX design and can also develope the working framework for the web site.
+                        I can provide services related to web application developmant and to design personal web site for business purpose.
+                        I alse have knowledge on Bootstrap.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opantab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opantab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opantab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>
+                            UI/UX designer for web Interface</li>
+                            <li><span>Web App Developmant</span><br>
+                            Web development</li>
+                            <li><span>Application developmant</span><br>
+                            Application developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content"id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br>
+                            UI/UX designer for web Interface</li>
+                            <li><span>Web App Developmant</span><br>
+                            Web development</li>
+                            <li><span>Application developmant</span><br>
+                            Application developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>UI/UX</span><br>
+                            UI/UX designer for web Interface</li>
+                            <li><span>Web App Developmant</span><br>
+                            Web development</li>
+                            <li><span>Application developmant</span><br>
+                            Application developer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
+    <script src="main.js">
+        var tablinks=document.getElemantByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-content");
 
-    <script src="main.js"></script>
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+        }
+    </script>
 </body>
 </html>
